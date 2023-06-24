@@ -3,22 +3,27 @@
 ## AtCoderへのログイン
 - ログイン
 ```
-acc login
-oj login https://atcoder.jp/
+$ acc login
+$ oj login https://atcoder.jp/
 ```
 - ログアウト
 ```
-acc logout
+$ acc logout
 ```
 - ログイン状態か確認する．
 ```
-acc session
+$ acc session
+```
+- accとojが連携できているか確認
+```
+$ acc check-oj
+online-judge-tools is available.
 ```
 
 ## 解答の流れ
 ### コンテスト用ディレクトリを作成する
 ```
-acc new abc101
+$ acc new abc101
 ```
 問題の一覧が表示されるのでテストケースを
 ダウンロードする問題を選択する．
@@ -27,25 +32,25 @@ acc new abc101
 敢えて`-o`を付けてコンパイルした場合を例示
 - コンパイル
 ```
-g++ -o main main.cpp
+$ g++ -o main main.cpp
 ```
 - テスト
 ```
-oj t -c "./main" -d ./tests/
+$ oj t -c "./main" -d ./tests/
 ```
 - `-c`: 各サンプルケースに対して実行するコマンド
 - `-d`: サンプルケースが存在するディレクトリ
 
 ### 問題を提出する
 ```
-acc submit main.cpp
+$ acc submit main.cpp
 ```
 提出するファイルが格納されているディレクトリから
 提出先を自動で判別してくれる．
 
 ### 問題用ディレクトリを追加する
 ```
-acc add
+$ acc add
 ```
 - 再び問題を選択する画面になる．
 - 既にディレクトリが作成されている問題は選択できない．
