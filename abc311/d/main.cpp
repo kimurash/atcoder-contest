@@ -43,9 +43,6 @@ int main(){
 }
 
 void move_on_ice(int16_t x, int16_t y){
-    if(stop[x][y]){
-        return;
-    }
     stop[x][y] = true;
 
     int16_t nx, ny;
@@ -53,12 +50,13 @@ void move_on_ice(int16_t x, int16_t y){
         nx = x;
         ny = y;
 
-        if(grid[nx + dx[i]][ny + dy[i]] != '#'){
-            while(grid[nx + dx[i]][ny + dy[i]] != '#'){
-                nx += dx[i];
-                ny += dy[i];
-                grid[nx][ny] = '*';
-            }
+        while(grid[nx + dx[i]][ny + dy[i]] != '#'){
+            nx += dx[i];
+            ny += dy[i];
+            grid[nx][ny] = '*';
+        }
+
+        if(!stop[nx][ny]){
             move_on_ice(nx, ny);
         }
     }
