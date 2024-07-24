@@ -1,4 +1,4 @@
-# atcoder_comp
+# atcoder-comp
 
 ## AtCoderへのログイン
 - ログイン
