@@ -55,7 +55,7 @@ int main(){
     int32_t now;
     int64_t mindist;
     while (!pq.empty()) {
-        // Qから未確定頂点が現れるまで取り出す
+        // 待ち行列から未確定頂点が現れるまで取り出す
         tie(mindist, now) = pq.top(); pq.pop();
         if (locked[now]) {
             continue;
