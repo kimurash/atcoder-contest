@@ -17,8 +17,6 @@ typedef vector<i16> vi16;
 typedef vector<i32> vi32;
 typedef vector<i64> vi64;
 
-bool check(string S, string T, int pos);
-
 int main(){
     cin.tie(nullptr);
 
