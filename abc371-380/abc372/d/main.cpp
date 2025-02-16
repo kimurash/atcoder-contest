@@ -13,7 +13,7 @@ typedef int16_t i16;
 typedef int32_t i32;
 typedef int64_t i64;
 
-typedef uint32_t ui32;
+typedef uint32_t uint32_t;
 
 typedef vector<i16> vi16;
 typedef vector<i32> vi32;
@@ -22,7 +22,7 @@ typedef vector<i64> vi64;
 int main(){
     cin.tie(nullptr);
 
-    ui32 N;
+    uint32_t N;
     cin >> N;
 
     i32 H[N + 1];

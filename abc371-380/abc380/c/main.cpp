@@ -13,7 +13,7 @@ typedef int16_t i16;
 typedef int32_t i32;
 typedef int64_t i64;
 
-typedef uint32_t ui32;
+typedef uint32_t uint32_t;
 
 typedef vector<i16> vi16;
 typedef vector<i32> vi32;
@@ -56,8 +56,8 @@ int main(){
         }
     }
 
-    ui32 i = 0;
-    ui32 j = 0;
+    uint32_t i = 0;
+    uint32_t j = 0;
     char now = S[0];
     while(i < zero.size() || j < one.size()){
         if(now == '0'){
